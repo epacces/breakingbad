@@ -31,7 +31,7 @@
 		9E52BEB52510BBF700D4B955 /* Model.h in Headers */ = {isa = PBXBuildFile; fileRef = 9E52BEA52510BBF700D4B955 /* Model.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9E52BEB82510BBF700D4B955 /* Model.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E52BEA32510BBF700D4B955 /* Model.framework */; };
 		9E52BEB92510BBF700D4B955 /* Model.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9E52BEA32510BBF700D4B955 /* Model.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		9E52BEC12510BC0100D4B955 /* Actor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E52BEC02510BC0100D4B955 /* Actor.swift */; };
+		9E52BEC12510BC0100D4B955 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E52BEC02510BC0100D4B955 /* Character.swift */; };
 		9E52BED72510C2FD00D4B955 /* SwiftReduxTestSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E52BECE2510C2FC00D4B955 /* SwiftReduxTestSupport.framework */; };
 		9E52BEDE2510C2FD00D4B955 /* SwiftReduxTestSupportTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E52BEDD2510C2FD00D4B955 /* SwiftReduxTestSupportTests.swift */; };
 		9E52BEE02510C2FD00D4B955 /* SwiftReduxTestSupport.h in Headers */ = {isa = PBXBuildFile; fileRef = 9E52BED02510C2FC00D4B955 /* SwiftReduxTestSupport.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -248,7 +248,7 @@
 		9E52BEAB2510BBF700D4B955 /* ModelTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ModelTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E52BEB22510BBF700D4B955 /* ModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelTests.swift; sourceTree = "<group>"; };
 		9E52BEB42510BBF700D4B955 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9E52BEC02510BC0100D4B955 /* Actor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Actor.swift; sourceTree = "<group>"; };
+		9E52BEC02510BC0100D4B955 /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
 		9E52BEC42510C24500D4B955 /* SwiftReduxTestsSupport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftReduxTestsSupport.swift; sourceTree = "<group>"; };
 		9E52BEC72510C2C400D4B955 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		9E52BECE2510C2FC00D4B955 /* SwiftReduxTestSupport.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftReduxTestSupport.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -506,7 +506,7 @@
 				9E23A5AB250D4DC2009B0942 /* ImageLoader.swift */,
 				9E52BEA52510BBF700D4B955 /* Model.h */,
 				9E52BEA62510BBF700D4B955 /* Info.plist */,
-				9E52BEC02510BC0100D4B955 /* Actor.swift */,
+				9E52BEC02510BC0100D4B955 /* Character.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1157,7 +1157,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9E52BF152510EBF000D4B955 /* ImageLoader.swift in Sources */,
-				9E52BEC12510BC0100D4B955 /* Actor.swift in Sources */,
+				9E52BEC12510BC0100D4B955 /* Character.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

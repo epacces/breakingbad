@@ -1,6 +1,6 @@
 import Foundation
 
-public struct Actor: Decodable {
+public struct Character: Decodable {
     public var id: Int
     public var name: String
     public var image: URL
@@ -39,5 +39,5 @@ public struct Actor: Decodable {
 }
 
 
-extension Actor: Equatable { }
+extension Character: Equatable { }
 

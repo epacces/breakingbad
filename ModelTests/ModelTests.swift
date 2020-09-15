@@ -40,9 +40,9 @@ class ModelTests: XCTestCase {
            }
         """.data(using: .utf8)!
 
-        XCTAssertNoThrow(try JSONDecoder().decode(Actor.self, from: json))
+        XCTAssertNoThrow(try JSONDecoder().decode(Character.self, from: json))
 
-        let expected = Actor(
+        let expected = Character(
             id: 3,
             name: "Skyler White",
             image: URL(string: "https://s-i.huffpost.com/gen/1317262/images/o-ANNA-GUNN-facebook.jpg")!,
@@ -53,7 +53,7 @@ class ModelTests: XCTestCase {
         )
 
         XCTAssertEqual(expected,
-                       try! JSONDecoder().decode(Actor.self, from: json))
+                       try! JSONDecoder().decode(Character.self, from: json))
         
     }
 }

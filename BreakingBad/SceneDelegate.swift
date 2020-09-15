@@ -15,8 +15,8 @@ import Model
 
 struct AppState {
     var isLoadingCharacters: Bool = false
-    var loadedCharacters: [Actor] = []
-    var filteredCharacters: [Actor] = []
+    var loadedCharacters: [Character] = []
+    var filteredCharacters: [Character] = []
     var searchText: String = ""
 }
 

@@ -7,10 +7,10 @@ class CharacterListTests: XCTestCase {
 
     func testFilterCharactersByText() {
 
-        let characters: [Actor] = [
-            Actor(name: "Walter White"),
-            Actor(name: "Skyler White"),
-            Actor(name: "Mike Ehrmantraut")
+        let characters: [Character] = [
+            Character(name: "Walter White"),
+            Character(name: "Skyler White"),
+            Character(name: "Mike Ehrmantraut")
         ]
 
         let state = CharacterListState(
@@ -26,16 +26,16 @@ class CharacterListTests: XCTestCase {
             Step(.send, .searchText("Wh"), {
                 $0.searchText = "Wh"
                 $0.filteredCharacters = [
-                    Actor(name: "Walter White"),
-                    Actor(name: "Skyler White"),
+                    Character(name: "Walter White"),
+                    Character(name: "Skyler White"),
                 ]
             }),
                Step(.send, .searchText(""), {
                 $0.searchText = ""
                 $0.filteredCharacters = [
-                    Actor(name: "Walter White"),
-                    Actor(name: "Skyler White"),
-                    Actor(name: "Mike Ehrmantraut")
+                    Character(name: "Walter White"),
+                    Character(name: "Skyler White"),
+                    Character(name: "Mike Ehrmantraut")
                 ]
                })
         )
@@ -43,10 +43,10 @@ class CharacterListTests: XCTestCase {
 
     func testFilterCharactersBySeason() {
 
-        let characters: [Actor] = [
-            Actor(name: "Walter White", appearance: [1,2,3,4,5]),
-            Actor(name: "Skyler White", appearance: [1,2,3,4,5]),
-            Actor(name: "Mike Ehrmantraut", appearance: [2,3,4,5])
+        let characters: [Character] = [
+            Character(name: "Walter White", appearance: [1,2,3,4,5]),
+            Character(name: "Skyler White", appearance: [1,2,3,4,5]),
+            Character(name: "Mike Ehrmantraut", appearance: [2,3,4,5])
         ]
 
         let state = CharacterListState(
@@ -62,8 +62,8 @@ class CharacterListTests: XCTestCase {
             Step(.send, .seasonAppearance(1)) {
                 $0.seasonAppeanceSelected = 1
                 $0.filteredCharacters = [
-                    Actor(name: "Walter White", appearance: [1,2,3,4,5]),
-                    Actor(name: "Skyler White", appearance: [1,2,3,4,5])
+                    Character(name: "Walter White", appearance: [1,2,3,4,5]),
+                    Character(name: "Skyler White", appearance: [1,2,3,4,5])
                 ]
             },
                Step(.send, .seasonAppearance(0)) {
@@ -79,10 +79,10 @@ class CharacterListTests: XCTestCase {
 
     func testCharacterFilters() {
 
-        let characters: [Actor] = [
-            Actor(name: "Walter White", appearance: [1,2,3,4,5]),
-            Actor(name: "Skyler White", appearance: [1,2,3,4,5]),
-            Actor(name: "Mike Ehrmantraut", appearance: [2,3,4,5])
+        let characters: [Character] = [
+            Character(name: "Walter White", appearance: [1,2,3,4,5]),
+            Character(name: "Skyler White", appearance: [1,2,3,4,5]),
+            Character(name: "Mike Ehrmantraut", appearance: [2,3,4,5])
         ]
 
         let state = CharacterListState(
@@ -100,15 +100,15 @@ class CharacterListTests: XCTestCase {
                 $0.seasonAppeanceSelected = 1
                 $0.searchText = "Wh"
                 $0.filteredCharacters = [
-                    Actor(name: "Walter White", appearance: [1,2,3,4,5]),
-                    Actor(name: "Skyler White", appearance: [1,2,3,4,5])
+                    Character(name: "Walter White", appearance: [1,2,3,4,5]),
+                    Character(name: "Skyler White", appearance: [1,2,3,4,5])
                 ]
             },
                Step(.send, .searchText("Wa")) {
                 $0.seasonAppeanceSelected = 1
                 $0.searchText = "Wa"
                 $0.filteredCharacters = [
-                    Actor(name: "Walter White", appearance: [1,2,3,4,5])
+                    Character(name: "Walter White", appearance: [1,2,3,4,5])
                 ]
             },
 
@@ -122,7 +122,7 @@ class CharacterListTests: XCTestCase {
                 $0.seasonAppeanceSelected = 2
                 $0.searchText = "ke"
                 $0.filteredCharacters = [
-                    Actor(name: "Mike Ehrmantraut", appearance: [2,3,4,5])
+                    Character(name: "Mike Ehrmantraut", appearance: [2,3,4,5])
                 ]
             }
 

@@ -22,8 +22,8 @@ class AppLifecycleTests: XCTestCase {
     func testLoadCharacters() {
 
         let expectedChars = [
-            Actor(name: "Walter"),
-            Actor(name: "Jessy")
+            Character(name: "Walter"),
+            Character(name: "Jessy")
         ]
         Current.characters = {
             .sync(work: { expectedChars })

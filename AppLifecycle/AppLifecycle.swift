@@ -6,20 +6,20 @@ import SwiftRedux
 
 public enum AppLifecycleAction: Equatable {
     case loadCharacters
-    case charactersResponse([Actor])
+    case charactersResponse([Character])
 
 }
 
 public enum AppLifecycleState: Equatable {
     case idle
     case loadingData
-    case loadedData([Actor])
+    case loadedData([Character])
 }
 
 public var Current = Environment.live
 
 public struct Environment {
-    public var characters: () -> Effect<[Actor]>
+    public var characters: () -> Effect<[Character]>
 }
 
 
@@ -32,8 +32,8 @@ public extension Environment {
 public extension Environment {
      static let mock = Environment(characters: {
         .sync(work: { [
-            Actor(name: "Walter White"),
-            Actor(name: "Skyler White")
+            Character(name: "Walter White"),
+            Character(name: "Skyler White")
             ]}
         )
       })
@@ -60,7 +60,7 @@ public func appLifecycleReducer(state: inout AppLifecycleState, action: AppLifec
 let charactersPublisher =  URLSession.shared.dataTaskPublisher(for: URL(string: "https://breakingbadapi.com/api/characters")!)
     .map(\.data)
     .tryMap {
-        try JSONDecoder().decode([Actor].self, from: $0)
+        try JSONDecoder().decode([Character].self, from: $0)
 }
 .replaceError(with: [])
 .receive(on: DispatchQueue.main)

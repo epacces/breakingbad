@@ -7,13 +7,13 @@ import UIComponents
 public struct CharacterListState: Equatable {
     public var searchText: String
     public var seasonAppeanceSelected: Int = 0
-    public var loadedCharacters: [Actor]
-    public var filteredCharacters: [Actor]
+    public var loadedCharacters: [Character]
+    public var filteredCharacters: [Character]
 
     public init(
         searchText: String,
-        loadedCharacters: [Actor],
-        filteredCharacters: [Actor],
+        loadedCharacters: [Character],
+        filteredCharacters: [Character],
         seasonAppearanceSelected: Int = 0
     ) {
         self.searchText = searchText
@@ -123,7 +123,7 @@ public struct CharacterListView: View {
 struct CharacterListView_Previews: PreviewProvider {
 
     static let characters = [
-        Actor(
+        Character(
             id: 1,
             name: "Walter White",
             image: URL(string: "https://images.amcnetworks.com/amc.com/wp-content/uploads/2015/04/cast_bb_700x1000_walter-white-lg.jpg")!,
@@ -134,7 +134,7 @@ struct CharacterListView_Previews: PreviewProvider {
                 "High School Chemistry Teacher",
                 "Meth King Pin"
         ]),
-        Actor(
+        Character(
                id: 2,
                name: "Skyler White",
                image: URL(string: "https://s-i.huffpost.com/gen/1317262/images/o-ANNA-GUNN-facebook.jpg")!,
@@ -161,7 +161,7 @@ struct CharacterListView_Previews: PreviewProvider {
 
 
 public struct CharacterDetailView: View {
-    let character: Actor
+    let character: Character
 
     public var body: some View {
 
@@ -204,7 +204,7 @@ struct CharacterDetails_Previews: PreviewProvider {
 
         NavigationView {
             CharacterDetailView(
-                character: Actor(
+                character: Character(
                     id: 1,
                     name: "Walter White",
                     image: URL(string: "https://images.amcnetworks.com/amc.com/wp-content/uploads/2015/04/cast_bb_700x1000_walter-white-lg.jpg")!,
